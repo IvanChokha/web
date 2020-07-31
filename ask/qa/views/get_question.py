@@ -8,7 +8,7 @@ def get_question(request, pk):
     question = Qestion.get(pk)
   except Question.DoesNotExist:
     raise Http404
-  answers = Answer.objects.filter(question=question)
+  answers = Answer.objects.filter(question=pk)
   return render(request, 'question.html', {
         'question': question,
         'answers': answers

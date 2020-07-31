@@ -4,5 +4,5 @@ from qa.views import *
 urlpatterns = [ 
   url(r'^/', get_new_questions),
   url(r'^/popular', get_popular_questions),
-  path('^/question/<int:pk>', get_question) ]
+  url('^/question/(?P<pk>[0-9]+)', get_question) ]
 
