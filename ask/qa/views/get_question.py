@@ -3,8 +3,7 @@ from django.shortcuts import render
 from ..models import Question
 from ..models import Answer
 
-def get_popular_questions(request, pk):
-
+def get_question(request, pk):
   try:
     question = Qestion.get(pk)
   except Question.DoesNotExist:
